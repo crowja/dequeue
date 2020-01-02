@@ -1,10 +1,9 @@
 /**
  *  @file dequeue.c
- *  @version 0.0.0
- *  @date Tue Dec 17 23:56:08 CST 2019
- *  @copyright %COPYRIGHT%
- *  @brief FIXME
- *  @details FIXME
+ *  @version 0.0.1-dev0
+ *  @date Wed Jan  1 21:50:34 CST 2020
+ *  @copyright 2020 John A. Crow <crowja@gmail.com>
+ *  @license Unlicense <http://unlicense.org/>
  */
 
 #include <stdlib.h>
@@ -71,7 +70,7 @@ dequeue_init(struct dequeue *p, void *x)
 const char *
 dequeue_version(void)
 {
-   return "0.0.0";
+   return "0.0.1-dev0";
 }
 
 int

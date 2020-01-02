@@ -1,10 +1,9 @@
 /**
  *  @file dequeue.h
- *  @version 0.0.0
- *  @date Tue Dec 17 23:56:08 CST 2019
- *  @copyright %COPYRIGHT%
- *  @brief FIXME
- *  @details FIXME
+ *  @version 0.0.1-dev0
+ *  @date Wed Jan  1 21:50:35 CST 2020
+ *  @copyright 2020 John A. Crow <crowja@gmail.com>
+ *  @license Unlicense <http://unlicense.org/>
  */
 
 #ifndef _DEQUEUE_H_
