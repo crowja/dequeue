@@ -1,6 +1,6 @@
 /**
  *  @file dequeue.h
- *  @version 0.0.1-dev0
+ *  @version 0.1.0-dev0
  *  @date Wed Jan  1 21:50:35 CST 2020
  *  @copyright 2020 John A. Crow <crowja@gmail.com>
  *  @license Unlicense <http://unlicense.org/>
