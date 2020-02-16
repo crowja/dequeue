@@ -1,7 +1,7 @@
 /**
  *  @file dequeue.c
  *  @version 0.1.0-dev0
- *  @date Wed Jan  1 21:50:34 CST 2020
+ *  @date Sun Feb 16, 2020 04:35:23 PM CST
  *  @copyright 2020 John A. Crow <crowja@gmail.com>
  *  @license Unlicense <http://unlicense.org/>
  */
@@ -11,15 +11,15 @@
 #include <string.h>                              /* FIXME */
 #include "dequeue.h"
 
-#ifdef  _IS_NULL
-#undef  _IS_NULL
+#ifdef  IS_NULL
+#undef  IS_NULL
 #endif
-#define _IS_NULL(p)   ((NULL == (p)) ? (1) : (0))
+#define IS_NULL(p)   ((NULL == (p)) ? (1) : (0))
 
-#ifdef  _FREE
-#undef  _FREE
+#ifdef  FREE
+#undef  FREE
 #endif
-#define _FREE(p)      ((NULL == (p)) ? (0) : (free((p)), (p) = NULL))
+#define FREE(p)      ((NULL == (p)) ? (0) : (free((p)), (p) = NULL))
 
 struct dqnode {
    struct dqnode *next;
@@ -38,7 +38,7 @@ dequeue_new(void)
    struct dequeue *tp;
 
    tp = (struct dequeue *) malloc(sizeof(struct dequeue));
-   if (_IS_NULL(tp))
+   if (IS_NULL(tp))
       return NULL;
 
    tp->head = NULL;
@@ -53,7 +53,7 @@ dequeue_free(struct dequeue **pp)
 
    /* Do some magic here ... */
 
-   _FREE(*pp);
+   FREE(*pp);
    *pp = NULL;
 }
 
@@ -85,5 +85,5 @@ dequeue_head_push(struct dequeue *p)
    return 0;
 }
 
-#undef  _IS_NULL
-#undef  _FREE
+#undef  IS_NULL
+#undef  FREE
