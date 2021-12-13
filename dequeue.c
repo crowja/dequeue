@@ -57,6 +57,12 @@ dequeue_free(struct dequeue **pp)
    *pp = NULL;
 }
 
+const char *
+dequeue_version(void)
+{
+   return "0.1.0-dev0";
+}
+
 int
 dequeue_init(struct dequeue *p, void *x)
 {
@@ -65,12 +71,6 @@ dequeue_init(struct dequeue *p, void *x)
    p->x = x;                                     /* FIXME */
 
    return 0;
-}
-
-const char *
-dequeue_version(void)
-{
-   return "0.1.0-dev0";
 }
 
 int
